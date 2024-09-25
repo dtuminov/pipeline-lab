@@ -21,8 +21,8 @@ with DAG(
     task3 = upload_to_postgres.upload_to_postgres()
     task4 = get_rec_embeddings.get_rec_embeddings()
     task5 = search_embedder.search_embedder()
-    task6_1 = upload_to_Milvus.upload_to_milvus()
-    task6_2 = upload_to_Milvus.upload_to_milvus()
+    task6_1 = upload_to_milvus.upload_to_milvus()
+    task6_2 = upload_to_milvus.upload_to_milvus()
     task7 = make_backup.make_backup()
 
     task1 >> task2 >> [task3, task4, task5]
