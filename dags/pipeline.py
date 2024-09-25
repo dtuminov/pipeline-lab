@@ -7,7 +7,7 @@ from operators import clean_JSONL
 from operators import upload_to_postgres
 from operators import get_rec_embeddings
 from operators import search_embedder
-from operators import upload_to_Milvus
+from operators import upload_to_milvus
 from operators import make_backup
 
 with DAG(
@@ -21,8 +21,8 @@ with DAG(
     task3 = upload_to_postgres.upload_to_postgres()
     task4 = get_rec_embeddings.get_rec_embeddings()
     task5 = search_embedder.search_embedder()
-    task6_1 = upload_to_Milvus.upload_to_Milvus()
-    task6_2 = upload_to_Milvus.upload_to_Milvus()
+    task6_1 = upload_to_Milvus.upload_to_milvus()
+    task6_2 = upload_to_Milvus.upload_to_milvus()
     task7 = make_backup.make_backup()
 
     task1 >> task2 >> [task3, task4, task5]

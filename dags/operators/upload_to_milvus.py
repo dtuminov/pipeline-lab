@@ -1,4 +1,4 @@
 from airflow.decorators import task
 @task
-def upload_to_Milvus()->None:
+def upload_to_milvus()->None:
     print('hello')
