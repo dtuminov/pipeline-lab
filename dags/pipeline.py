@@ -32,7 +32,3 @@ with DAG(
 
 
 
-    #check_config.check_config() >> clean_JSONL.clean_JSONL() >> [upload_to_postgres.upload_to_postgres(),
-     #   get_rec_embeddings.get_rec_embeddings(),
-      #  search_embedder.search_embedder() >> upload_to_Milvus.upload_to_Milvus()] >> make_backup.make_backup()
-
